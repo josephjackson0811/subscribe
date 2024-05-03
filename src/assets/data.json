@@ -1,0 +1,57 @@
+{
+    "title": "Funny Videos",
+    "logo": "logo.png",
+    "landing_fixed_first_content": "1.jpg",
+    "landing_content": [
+    "1.jpg",
+    "logo.png",
+    "1.jpg",
+    "logo.png",
+    "1.jpg"
+    ],
+    "suscription_legal_top_text": "null | Lorem Impsum",
+    "subscription_configuration": {
+    "url_dcb_redirect": "null | https://........",
+    "url_pin_request": "null | https://.........",
+    "url_pin_check": "null | https://.........",
+    "url_call2action_request": "null | https://.........",
+    "url_call2action_websocket": "null | ws://.........",
+    "call2_action_timer_minutes": 5,
+    "call2_action_timer_text": "null | Please send OK to 5555, Hurry up before the timer goes finishes"
+    },
+    "check_box": "(null | display | autocheck)",
+    "club_categories": [
+    "Funny", "Scary", "Kids", "Animals"
+    ],
+    "subscription_legal_above_text": "Lorem Impsum",
+    "type_service": "dcb | pin | call2action",
+    "club_content": [
+    {
+    "category": "Funny",
+    "content": "bg.mp4",
+    "description": null,
+    "link": null
+    },
+    {
+    "category": "Scary",
+    "content": "bg.mp4",
+    "description": null,
+    "link": null
+    },
+    {
+    "category": "Kids",
+    "content": "bg.mp4",
+    "description": null,
+    "link": null
+    },
+    {
+    "category": "Animals",
+    "content": "bg.mp4",
+    "description": null,
+    "link": null
+    }
+    ],
+    "legal_page_text": "null | Lorem impsum",
+    "cancellation_url": "https://",
+    "login_url": "https://"
+}
