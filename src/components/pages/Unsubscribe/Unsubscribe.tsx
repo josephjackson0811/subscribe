@@ -42,10 +42,10 @@ const Unsubscribe = () => {
           onClose={() => setIsOpenModal(false)}
           aria-describedby="alert-dialog-slide-description"
         >
-          <DialogTitle>{"Confirmation"}</DialogTitle>
+          <DialogTitle sx={{ width: "50%" }}>{"Confirmation"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
-              Confirmation
+              If you press 'Yes', you will be unsubscribed. Are you sure?
             </DialogContentText>
           </DialogContent>
           <DialogActions>

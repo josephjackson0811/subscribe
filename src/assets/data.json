@@ -1,57 +1,75 @@
 {
     "title": "Funny Videos",
     "logo": "logo.png",
-    "landing_fixed_first_content": "1.jpg",
+    "landing_fixed_first_content": "bg.mp4",
     "landing_content": [
-    "1.jpg",
-    "logo.png",
-    "1.jpg",
-    "logo.png",
-    "1.jpg"
+        "1.jpg",
+        "auth_bg.webp",
+        "1.jpg",
+        "auth_bg.webp",
+        "1.jpg"
     ],
-    "suscription_legal_top_text": "null | Lorem Impsum",
+    "suscription_legal_top_text": "",
     "subscription_configuration": {
-    "url_dcb_redirect": "null | https://........",
-    "url_pin_request": "null | https://.........",
-    "url_pin_check": "null | https://.........",
-    "url_call2action_request": "null | https://.........",
-    "url_call2action_websocket": "null | ws://.........",
-    "call2_action_timer_minutes": 5,
-    "call2_action_timer_text": "null | Please send OK to 5555, Hurry up before the timer goes finishes"
+        "url_dcb_redirect": "null | https://........",
+        "url_pin_request": "null | https://.........",
+        "url_pin_check": "null | https://.........",
+        "url_call2action_request": "null | https://.........",
+        "url_call2action_websocket": "null | ws://.........",
+        "call2_action_timer_minutes": 5,
+        "call2_action_timer_text": "null | Please send OK to 5555, Hurry up before the timer goes finishes"
     },
     "check_box": "(null | display | autocheck)",
+    "check_box_content": "I have read the terms of use and agree to activate the Clubxzone subscription service",
     "club_categories": [
-    "Funny", "Scary", "Kids", "Animals"
+        "Funny", "Scary", "Kids", "Animals"
     ],
-    "subscription_legal_above_text": "Lorem Impsum",
+    "subscription_legal_above_text": "By pressing the button, you buy the service and have full access to the videos for just €3.65 (incl. VAT) per week, with direct debit to your VODAFONE account",
     "type_service": "dcb | pin | call2action",
     "club_content": [
-    {
-    "category": "Funny",
-    "content": "bg.mp4",
-    "description": null,
-    "link": null
-    },
-    {
-    "category": "Scary",
-    "content": "bg.mp4",
-    "description": null,
-    "link": null
-    },
-    {
-    "category": "Kids",
-    "content": "bg.mp4",
-    "description": null,
-    "link": null
-    },
-    {
-    "category": "Animals",
-    "content": "bg.mp4",
-    "description": null,
-    "link": null
-    }
+        {
+            "category": "Funny",
+            "content": "bg.mp4",
+            "description": "This is very funny game. Many people are enjoying this at the moment.",
+            "link": "https://www.youtube.com/watch?v=DOKp4KiVIb4"
+        },
+        {
+            "category": "Scary",
+            "content": "auth_bg.webm",
+            "description": "This is very scary game. Come here those who want to enjoy horribleness",
+            "link": "https://www.youtube.com/watch?v=DOKp4KiVIb4"
+        },
+        {
+            "category": "Kids",
+            "content": "bg.mp4",
+            "description": "This is only for kids.",
+            "link": "https://www.youtube.com/watch?v=DOKp4KiVIb4"
+        },
+        {
+            "category": "Animals",
+            "content": "auth_bg.webm",
+            "description": "There are so many animals here.",
+            "link": "https://www.youtube.com/watch?v=DOKp4KiVIb4"
+        }
     ],
-    "legal_page_text": "null | Lorem impsum",
+    "legal_page_text": "Clubxzone is a subscription service exclusively for Vodafone users. To use the service you must be over 18 years old. The use of this service by minors is prohibited. With your subscription to the Clubxzone service, you enjoy all the content of the http://gr.clubxzone.com page without restrictions. The subscription is activated by surfing the Vodafone network and additional charges may apply depending on the data usage agreement you have with your mobile operator. The cost of the service with full access to the videos is €3.65 (incl. VAT) per week, with direct debit to the VODAFONE account. To delete click here. Customer service at 211 012 0187 or by e-mail at info.gr@nviasms.com. Service provider: Data SMS Greece MEPE, 25th March 11, Chalandri, 15233. See General Terms and Conditions.",
     "cancellation_url": "https://",
-    "login_url": "https://"
+    "login_url": "https://",
+    "subscription_flow": [
+        {
+            "image" : "first.png",
+            "title" : "Direct Carrier Billing",
+            "description" : "This is like Thailand example, we should Legal + Button to subscribe, when click to subscribe we redirect to url_dcb_redirect."
+        },
+        {
+            "image" : "second.png",
+            "title" : "Sms + Pin",
+            "description" : "this is like UAE example, we should display Legal Info + textBox to enter the mobile number (this will execute URL url_pin_request) and then a textbox to enter the PIN that the users get, after the user clicks on check PIN, we should call to url_pin_check if we get OK we set the cookie and redirect user to /club/ of the page if not, we show message of error."
+        },
+        {
+            "image" : "third.png",
+            "title" : "Sms + Call2Action",
+            "description" : "This is how Greece works, we should display Legal Info + textBox to enter the mobile number (this will execute URL url_call2action_request), after this action is done we will display a countdown timer with N minutes that waits to receive websocket confirmation of the action (as the example I game you), if we get the socket event with the call2action confirmation we set cookie and redirect user to /club/ content."
+        }
+    ]
 }

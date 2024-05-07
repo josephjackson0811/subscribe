@@ -6,22 +6,21 @@ import Landing from "./components/pages/Landing";
 import Login from "./components/pages/Login/Login";
 import Club from "./components/pages/Club/Club";
 import Unsubscribe from "./components/pages/Unsubscribe/Unsubscribe";
+import "./globals.css";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Router>
-        <Routes>
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/club" element={<Club />} />
-          <Route path="/cancel" element={<Unsubscribe />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/club" element={<Club />} />
+        <Route path="/cancel" element={<Unsubscribe />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
